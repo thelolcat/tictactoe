@@ -23,12 +23,12 @@ int main()
             cout << endl;
         }
 
-        currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
-
         // checks for a win
         if (checkWin()) {
             cout << currentPlayer << " won!\nPlay again?(y/n)";
         }
+
+        currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
 
         // get input
         char input = cin.get();
