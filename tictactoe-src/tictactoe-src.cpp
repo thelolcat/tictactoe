@@ -13,7 +13,6 @@ char ui[3][10] = { {' ',' ',' ','|',' ',' ',' ','|',' ',' '},
                    {' ',' ',' ','|',' ',' ',' ','|',' ',' '}, };
 char currentPlayer = 'O';
 int input = 0;
-string inputCache = "";
 bool checkWin();
 bool checkDraw();
 
@@ -66,7 +65,7 @@ int main()
         // and checks if the input is in the set 0 - 9
         input = cin.get();
         if (input == '\n') input = cin.get(); // handles a bug (see appendix 1)
-        cin.ignore(INT64_MAX, '\n'); // clears the cin stream of extra input
+        cin.ignore(INT64_MAX,'\n'); // clears the cin stream of extra input
         input -= 48; // so that '1' becomes 1 and so on
         if (input < 1 || input > 9) continue;
 
